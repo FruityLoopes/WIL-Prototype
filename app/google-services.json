@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "991851480681",
+    "project_id": "wil-prototype",
+    "storage_bucket": "wil-prototype.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991851480681:android:042dc3d7ac4186ef5804f8",
+        "android_client_info": {
+          "package_name": "com.example.uviweappv1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991851480681-4l7a7cb3k28cbajtup3usk101etaus3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-tS5XIDiq2bBPaS4fIQr2FvsIj1W8HrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991851480681-4l7a7cb3k28cbajtup3usk101etaus3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
