@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/attendance_background"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Attendance">
+
+
+    <!--Scroll View for the list of learners-->
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="338dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="87dp"
+        android:text="ATTENDANCE REGISTER"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dateRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dateRecyclerView"
+        android:layout_width="385dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="20dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="382dp"
+        android:layout_height="251dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="25dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/recordAttendanceButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateRecyclerView">
+
+        <LinearLayout
+            android:id="@+id/studentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Checkboxes for each student -->
+
+            <CheckBox
+                android:id="@+id/checkboxStudent1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zwanga Muthavhine" />
+
+            <CheckBox
+                android:id="@+id/checkboxStudent2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chad Andrews" />
+
+            <CheckBox
+                android:id="@+id/checkboxStudent3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Romeo Vlooh" />
+
+            <CheckBox
+                android:id="@+id/checkboxStudent4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bob Burgers" />
+
+            <CheckBox
+                android:id="@+id/checkboxStudent5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Homer Simpson" />
+
+            <CheckBox
+                android:id="@+id/checkboxStudent6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rick Sanchez" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/recordAttendanceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="57dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="Record Attendance"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
