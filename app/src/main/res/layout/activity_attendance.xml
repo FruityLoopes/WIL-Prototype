@@ -14,45 +14,41 @@
 
     <TextView
         android:id="@+id/tvCategory"
-        android:layout_width="338dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="87dp"
+        android:layout_width="317dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="71dp"
         android:text="ATTENDANCE REGISTER"
         android:textColor="@android:color/white"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/dateRecyclerView"
+        app:layout_constraintBottom_toTopOf="@+id/tvSelectDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dateRecyclerView"
-        android:layout_width="385dp"
-        android:layout_height="119dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="360dp"
+        android:layout_height="131dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="26dp"
         android:padding="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectDate" />
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="382dp"
-        android:layout_height="251dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="25dp"
+        android:layout_height="286dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="16dp"
         android:layout_weight="1"
-        app:layout_constraintBottom_toTopOf="@+id/recordAttendanceButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dateRecyclerView">
@@ -64,6 +60,12 @@
             android:orientation="vertical">
 
             <!-- Checkboxes for each student -->
+
+            <TextView
+                android:id="@+id/tvListOfLearners"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registered Students:" />
 
             <CheckBox
                 android:id="@+id/checkboxStudent1"
@@ -107,14 +109,28 @@
         android:id="@+id/recordAttendanceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="27dp"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="Record Attendance"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <TextView
+        android:id="@+id/tvSelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="171dp"
+        android:text="Select date"
+        app:layout_constraintBottom_toTopOf="@+id/dateRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

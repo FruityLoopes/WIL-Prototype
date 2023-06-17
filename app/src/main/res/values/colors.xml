@@ -10,5 +10,8 @@
     <color name="textColor">#EcE5EC</color>
     <color name="pinkColor">#FF003B</color>
     <color name="transparentColor">#00FFFFFF</color>
+    <color name="date_text_color">#FF5722</color>
+    <color name="selected_date_text_color">#000000</color>
+    <color name="selected_date_item_background_color">#D3D3D1</color>
 
 </resources>
