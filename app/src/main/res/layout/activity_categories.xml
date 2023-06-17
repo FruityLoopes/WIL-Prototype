@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/category_background"
+    tools:context=".categories">
+
+    <Button
+        android:id="@+id/btnAttendance"
+        android:layout_width="214dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="52dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Attendance"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+
+    <Button
+        android:id="@+id/btnFinance"
+        android:layout_width="214dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="71dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Finance"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnDonation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAttendance" />
+
+    <Button
+        android:id="@+id/btnDonation"
+        android:layout_width="214dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="109dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Donation"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFinance" />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="197dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginBottom="79dp"
+        android:text="Select Category"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnAttendance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
