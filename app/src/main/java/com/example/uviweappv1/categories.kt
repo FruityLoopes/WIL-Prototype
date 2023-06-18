@@ -6,14 +6,23 @@ import android.os.Bundle
 import android.widget.Button
 
 lateinit var btnAttendance: Button
+lateinit var btnFinance: Button
 class categories : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_categories)
         btnAttendance = findViewById(R.id.btnAttendance)
+        btnFinance = findViewById(R.id.btnFinance)
 
+        //Directing to the Attendace page
         btnAttendance.setOnClickListener({
             val intent = Intent(this, Attendance::class.java)
+            startActivity(intent)
+        })
+
+        //Directing to the Finance page
+        btnFinance.setOnClickListener({
+            val intent = Intent(this, finance::class.java )
             startActivity(intent)
         })
     }
