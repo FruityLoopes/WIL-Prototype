@@ -5,4 +5,173 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/donation_background"
-    tools:context=".donation"/>
+    tools:context=".donation">
+
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="406dp"
+        android:layout_height="479dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRecord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart"
+                android:layout_width="match_parent"
+                android:layout_height="206dp"
+                android:layout_centerHorizontal="true"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="195dp" />
+
+            <LinearLayout
+                android:layout_width="355dp"
+                android:layout_height="41dp"
+                android:layout_below="@id/pieChart"
+                android:layout_marginStart="16dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/txtBank"
+                    android:layout_width="58dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/baseline_square_1"
+                    android:layout_weight="1"
+                    android:drawableTint="@color/purple_200"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Direct EFT"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="88dp"
+                    tools:layout_editor_absoluteY="506dp" />
+
+                <TextView
+                    android:id="@+id/txtPaypal"
+                    android:layout_width="58dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/baseline_square_2"
+                    android:drawableTint="@color/yellow"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Paypal"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="182dp"
+                    tools:layout_editor_absoluteY="534dp" />
+
+                <TextView
+                    android:id="@+id/txtGifts"
+                    android:layout_width="58dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/baseline_square_3"
+                    android:drawableTint="@color/red"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Physical Gifts"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    tools:layout_editor_absoluteX="267dp"
+                    tools:layout_editor_absoluteY="534dp" />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvPayment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Record Donation"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:id="@+id/txtFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:hint="First Name" />
+
+            <EditText
+                android:id="@+id/txtLastName"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:hint="Last Name" />
+
+            <EditText
+                android:id="@+id/txtContact"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:ems="10"
+                android:hint="Contact number"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/txtPayerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:hint="Email address"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:hint="Amount"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/txtNotes"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:gravity="start|top"
+                android:hint="Additional Notes"
+                android:inputType="textMultiLine" />
+
+
+            <EditText
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:hint="Date"
+                android:inputType="date" />
+
+            <CheckBox
+                android:id="@+id/cbConfirmation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I confirm that the above information is correct" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnRecord"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="26dp"
+        android:text="Record"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

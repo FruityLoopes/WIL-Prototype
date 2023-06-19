@@ -59,6 +59,7 @@
                 android:layout_height="68dp"
                 android:hint="Email address"
                 android:inputType="textEmailAddress" />
+
             <EditText
                 android:id="@+id/txtAmount"
                 android:layout_width="wrap_content"
@@ -66,6 +67,7 @@
                 android:ems="10"
                 android:hint="Amount"
                 android:inputType="numberDecimal" />
+
             <EditText
                 android:id="@+id/txtNotes"
                 android:layout_width="match_parent"
@@ -101,6 +103,7 @@
         android:layout_height="60dp"
         android:layout_marginBottom="26dp"
         android:text="Record"
+        android:backgroundTint="@android:color/holo_orange_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
