@@ -14,12 +14,12 @@
 
     <TextView
         android:id="@+id/tvCategory"
-        android:layout_width="317dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="71dp"
+        android:layout_width="310dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="32dp"
         android:text="ATTENDANCE REGISTER"
         android:textColor="@android:color/white"
         android:textSize="25dp"
@@ -31,24 +31,26 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dateRecyclerView"
-        android:layout_width="360dp"
-        android:layout_height="131dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="26dp"
+        android:layout_width="371dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="16dp"
         android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSelectDate" />
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="382dp"
-        android:layout_height="286dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="362dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/recordAttendanceButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dateRecyclerView">
@@ -102,35 +104,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Rick Sanchez" />
+
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/recordAttendanceButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="110dp"
-        android:layout_marginBottom="27dp"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:text="Record Attendance"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
     <TextView
         android:id="@+id/tvSelectDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="171dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="30dp"
         android:text="Select date"
         app:layout_constraintBottom_toTopOf="@+id/dateRecyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
 
+    <Button
+        android:id="@+id/recordAttendanceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="Record Attendance"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

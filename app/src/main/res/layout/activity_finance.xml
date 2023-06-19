@@ -59,7 +59,13 @@
                 android:layout_height="68dp"
                 android:hint="Email address"
                 android:inputType="textEmailAddress" />
-
+            <EditText
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:hint="Amount"
+                android:inputType="numberDecimal" />
             <EditText
                 android:id="@+id/txtNotes"
                 android:layout_width="match_parent"
@@ -68,8 +74,10 @@
                 android:hint="Additional Notes"
                 android:inputType="textMultiLine" />
 
+
+
             <EditText
-                android:id="@+id/editTextDate"
+                android:id="@+id/txtDate"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 android:ems="10"
