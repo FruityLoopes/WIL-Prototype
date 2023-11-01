@@ -12,32 +12,56 @@
 
     <!--Scroll View for the list of learners-->
 
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ECD Practitioner’s name"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
+        app:layout_constraintStart_toStartOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="223dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="39dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Class age group"
+        app:layout_constraintBottom_toTopOf="@+id/tvSelectDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
     <TextView
         android:id="@+id/tvCategory"
-        android:layout_width="310dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="295dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="30dp"
         android:text="ATTENDANCE REGISTER"
         android:textColor="@android:color/white"
         android:textSize="25dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tvSelectDate"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dateRecyclerView"
         android:layout_width="371dp"
-        android:layout_height="104dp"
+        android:layout_height="0dp"
         android:layout_marginStart="7dp"
         android:layout_marginEnd="7dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="340dp"
         android:padding="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSelectDate" />
@@ -112,12 +136,12 @@
         android:id="@+id/tvSelectDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="9dp"
         android:text="Select date"
         app:layout_constraintBottom_toTopOf="@+id/dateRecyclerView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
     <Button
         android:id="@+id/recordAttendanceButton"
