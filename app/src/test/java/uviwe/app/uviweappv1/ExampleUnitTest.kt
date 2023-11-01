@@ -1,4 +1,4 @@
-package com.example.uviweappv1
+package uviwe.app.uviweappv1
 
 import org.junit.Test
 

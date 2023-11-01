@@ -1,9 +1,10 @@
-package com.example.uviweappv1
+package uviwe.app.uviweappv1
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.uviweappv1.R
 
 lateinit var btnAttendance: Button
 lateinit var btnFinance: Button

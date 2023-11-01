@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/uviwe_register"
-    tools:context=".Register">
+    tools:context="uviwe.app.uviweappv1.Register">
 
     <TextView
         android:id="@+id/tvWelcome"
@@ -34,7 +34,8 @@
         app:layout_constraintBottom_toTopOf="@+id/txtEmailRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+        android:background="@drawable/edittext_bg"/>
 
     <EditText
         android:id="@+id/txtEmailRegister"
@@ -48,7 +49,8 @@
         app:layout_constraintBottom_toTopOf="@+id/txtPasswordRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        android:background="@drawable/edittext_bg"/>
 
     <EditText
         android:id="@+id/txtPasswordRegister"
@@ -61,7 +63,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btnSubmitRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmailRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailRegister"
+        android:background="@drawable/edittext_bg"/>
 
     <Button
         android:id="@+id/btnSubmitRegister"

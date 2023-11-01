@@ -1,4 +1,4 @@
-package com.example.uviweappv1
+package uviwe.app.uviweappv1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uviweappv1.R
 import java.util.Calendar
 import java.util.Date
 import java.text.SimpleDateFormat
@@ -63,13 +64,13 @@ class Attendance : AppCompatActivity() {
         override fun onCreateViewHolder(
             parent: ViewGroup,
             viewType: Int
-        ): DateAdapter.DateViewHolder {
+        ): DateViewHolder {
             val view =
                 LayoutInflater.from(parent.context).inflate(R.layout.item_date, parent, false)
             return DateViewHolder(view)
         }
         private var selectedItemPosition = RecyclerView.NO_POSITION
-        override fun onBindViewHolder(holder: DateAdapter.DateViewHolder, position: Int) {
+        override fun onBindViewHolder(holder: DateViewHolder, position: Int) {
             val date = dateList[position]
             val dateFormat = SimpleDateFormat("MMM dd", Locale.getDefault())
             val formattedDate = dateFormat.format(date)
@@ -89,11 +90,15 @@ class Attendance : AppCompatActivity() {
                 if (isSelected) {
                     // Apply highlighting to the selected date
                     itemView.setBackgroundResource(R.drawable.selected_date_item_background)
-                    dateTextView.setTextColor(ContextCompat.getColor(itemView.context, R.color.selected_date_text_color))
+                    dateTextView.setTextColor(ContextCompat.getColor(itemView.context,
+                        R.color.selected_date_text_color
+                    ))
                 } else {
                     // Reset background and text color for unselected dates
                     itemView.setBackgroundResource(0)
-                    dateTextView.setTextColor(ContextCompat.getColor(itemView.context, R.color.date_text_color))
+                    dateTextView.setTextColor(ContextCompat.getColor(itemView.context,
+                        R.color.date_text_color
+                    ))
                 }
 
 

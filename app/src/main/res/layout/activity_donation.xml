@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/donation_background"
-    tools:context=".donation">
+    tools:context="uviwe.app.uviweappv1.donation">
 
 
     <ScrollView
@@ -96,19 +96,22 @@
                 android:text="Record Fundraising Donation"
                 android:textAlignment="center"
                 android:textSize="30dp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"
+                ></TextView>
 
             <EditText
                 android:id="@+id/txtFirstName"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
-                android:hint="First Name" />
+                android:hint="First Name"
+                android:background="@drawable/edittext_bg"/>
 
             <EditText
                 android:id="@+id/txtLastName"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
-                android:hint="Last Name" />
+                android:hint="Last Name"
+                android:background="@drawable/edittext_bg"/>
 
             <EditText
                 android:id="@+id/txtContact"
@@ -116,7 +119,8 @@
                 android:layout_height="68dp"
                 android:ems="10"
                 android:hint="Contact number"
-                android:inputType="phone" />
+                android:inputType="phone"
+                android:background="@drawable/edittext_bg"/>
 
             <EditText
                 android:id="@+id/txtPayerEmail"

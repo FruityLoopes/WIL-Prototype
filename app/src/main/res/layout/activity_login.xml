@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/uviwe_login"
     android:orientation="vertical"
-    tools:context=".login">
+    tools:context="uviwe.app.uviweappv1.login">
 
     <EditText
         android:id="@+id/txtemail"
@@ -20,7 +20,8 @@
         app:layout_constraintBottom_toTopOf="@+id/txtPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/edittext_bg"/>
 
     <EditText
         android:id="@+id/txtPassword"
@@ -34,7 +35,8 @@
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtemail" />
+        app:layout_constraintTop_toBottomOf="@+id/txtemail"
+        android:background="@drawable/edittext_bg"/>
 
     <Button
         android:id="@+id/btnLogin"
