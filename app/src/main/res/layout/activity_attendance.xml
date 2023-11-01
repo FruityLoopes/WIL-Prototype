@@ -63,6 +63,7 @@
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="340dp"
         android:padding="8dp"
+        android:background="@drawable/edittext_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +94,9 @@
                 android:id="@+id/tvListOfLearners"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Registered Students:" />
+                android:text="Registered Students:"
+                android:background="@drawable/edittext_bg"
+                />
 
             <CheckBox
                 android:id="@+id/checkboxStudent1"
@@ -135,6 +138,7 @@
     </ScrollView>
 
     <TextView
+        android:background="@drawable/edittext_bg"
         android:id="@+id/tvSelectDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

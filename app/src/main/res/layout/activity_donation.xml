@@ -56,7 +56,8 @@
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     tools:layout_editor_absoluteX="88dp"
-                    tools:layout_editor_absoluteY="506dp" />
+                    tools:layout_editor_absoluteY="506dp"
+                    android:background="@drawable/edittext_bg"/>
 
                 <TextView
                     android:id="@+id/txtPaypal"
@@ -71,7 +72,8 @@
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     tools:layout_editor_absoluteX="182dp"
-                    tools:layout_editor_absoluteY="534dp" />
+                    tools:layout_editor_absoluteY="534dp"
+                    android:background="@drawable/edittext_bg"/>
 
                 <TextView
                     android:id="@+id/txtGifts"
@@ -86,7 +88,8 @@
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     tools:layout_editor_absoluteX="267dp"
-                    tools:layout_editor_absoluteY="534dp" />
+                    tools:layout_editor_absoluteY="534dp"
+                    android:background="@drawable/edittext_bg"/>
 
             </LinearLayout>
             <TextView
@@ -97,6 +100,7 @@
                 android:textAlignment="center"
                 android:textSize="30dp"
                 android:textStyle="bold"
+
                 ></TextView>
 
             <EditText
@@ -127,7 +131,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
                 android:hint="Email address"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edittext_bg"/>
 
             <EditText
                 android:id="@+id/txtAmount"
@@ -135,7 +140,8 @@
                 android:layout_height="55dp"
                 android:ems="10"
                 android:hint="Amount"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:background="@drawable/edittext_bg"/>
 
             <EditText
                 android:id="@+id/txtNotes"
@@ -143,7 +149,8 @@
                 android:layout_height="82dp"
                 android:gravity="start|top"
                 android:hint="Additional Notes"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:background="@drawable/edittext_bg"/>
 
             <!--<EditText
                 android:id="@+id/txtDate"
@@ -158,14 +165,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 android:ems="10"
-                android:hint="Event" />
+                android:hint="Event"
+                android:background="@drawable/edittext_bg"/>
 
             <EditText
                 android:id="@+id/txtEventFee"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 android:ems="10"
-                android:hint="Event Fee" />
+                android:hint="Event Fee"
+                android:background="@drawable/edittext_bg"/>
 
             <EditText
                 android:id="@+id/txtAmountPaid"
@@ -173,7 +182,8 @@
                 android:layout_height="55dp"
                 android:ems="10"
                 android:hint="Amount Paid"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:background="@drawable/edittext_bg"/>
 
             <EditText
                 android:id="@+id/txtDate"
@@ -181,7 +191,8 @@
                 android:layout_height="55dp"
                 android:ems="10"
                 android:hint="Date"
-                android:inputType="date" />
+                android:inputType="date"
+                android:background="@drawable/edittext_bg"/>
             <!---->
             <CheckBox
                 android:id="@+id/cbConfirmation"
