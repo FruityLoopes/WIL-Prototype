@@ -93,7 +93,7 @@
                 android:id="@+id/tvPayment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Record Donation"
+                android:text="Record Fundraising Donation"
                 android:textAlignment="center"
                 android:textSize="30dp"
                 android:textStyle="bold"></TextView>
@@ -141,6 +141,35 @@
                 android:hint="Additional Notes"
                 android:inputType="textMultiLine" />
 
+            <!--<EditText
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:hint="Date"
+                android:inputType="date" />-->
+            <!---->
+            <EditText
+                android:id="@+id/txtEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:hint="Event" />
+
+            <EditText
+                android:id="@+id/txtEventFee"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:hint="Event Fee" />
+
+            <EditText
+                android:id="@+id/txtAmountPaid"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:ems="10"
+                android:hint="Amount Paid"
+                android:inputType="numberDecimal" />
 
             <EditText
                 android:id="@+id/txtDate"
@@ -149,7 +178,7 @@
                 android:ems="10"
                 android:hint="Date"
                 android:inputType="date" />
-
+            <!---->
             <CheckBox
                 android:id="@+id/cbConfirmation"
                 android:layout_width="wrap_content"
