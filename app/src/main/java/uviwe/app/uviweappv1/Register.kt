@@ -30,6 +30,7 @@ class Register : AppCompatActivity() {
         log.setOnClickListener{
             val intent = Intent(this, login::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

@@ -8,11 +8,14 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.uviweappv1.R
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import java.util.Locale.Category
 
 class login : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
+    var check = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -21,6 +24,8 @@ class login : AppCompatActivity() {
         val login: Button = findViewById(R.id.btnLogin)
         // Initialize Firebase Auth
         auth = Firebase.auth
+        checkFirebaseUser()
+
 
         login.setOnClickListener{
             performLogin()
@@ -28,6 +33,10 @@ class login : AppCompatActivity() {
         register.setOnClickListener{
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
+        }
+
+        if (check == true){
+            finish()
         }
     }
 
@@ -58,5 +67,15 @@ class login : AppCompatActivity() {
             }.addOnFailureListener{
                 Toast.makeText(this,"Error occured ${it.localizedMessage}" , Toast.LENGTH_SHORT).show()
             }
+    }
+
+    private fun checkFirebaseUser() {
+        val firebaseUser: FirebaseUser? = auth.currentUser
+        if (firebaseUser != null) {
+            val intent = Intent(this, categories::class.java)
+            startActivity(intent)
+        } else {
+            check = false
+        }
     }
 }
