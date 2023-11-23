@@ -105,7 +105,8 @@ class Attendance : AppCompatActivity() {
         })
         spinClass.adapter= arrayAdapter
 
-        spinClass.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        spinClass.onItemSelectedListener = object : AdapterView.OnItemSelectedListener
+        {
             override fun onItemSelected(parent: AdapterView<*>, v: View, position: Int, arg3: Long) {
                 val spinnerValue = parent.getItemAtPosition(position).toString()
                 Toast.makeText(baseContext, "Selected Class $spinnerValue", Toast.LENGTH_SHORT).show()

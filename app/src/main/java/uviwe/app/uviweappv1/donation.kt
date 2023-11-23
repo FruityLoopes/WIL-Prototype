@@ -1,9 +1,20 @@
 package uviwe.app.uviweappv1
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.util.Log
+import android.view.Gravity
+import android.view.View
+import android.widget.AdapterView
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import com.example.uviweappv1.R
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.PieChart
@@ -12,13 +23,59 @@ import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.PercentFormatter
 import com.github.mikephil.charting.utils.MPPointF
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
+//
+import java.util.concurrent.Executors
+//
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.PopupWindow
+import android.widget.Spinner
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import java.util.Calendar
+import java.util.Date
+import java.text.SimpleDateFormat
+import java.util.Locale
+//import kotlin.coroutines.jvm.internal.CompletedContinuation.context
 
+//
 class donation : AppCompatActivity() {
+    private var auth: FirebaseAuth,
     lateinit var pieChart: PieChart
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_donation)
-
+        // Initialize Firebase Auth
+        auth = Firebase.auth
+        /*private lateinit*/ var auth: FirebaseAuth
+        /*private*/ var storagRef = Firebase.storage
+        //
+        //Declaring Variables
+        val FirstName: TextView = findViewById(R.id.txtFirstName)
+        val LastName: TextView = findViewById<EditText>(R.id.txtLastName)
+        val Contact: TextView = findViewById<EditText>(R.id.txtContact)
+        val PayerEmail: TextView = findViewById<EditText>(R.id.txtPayerEmail)
+        val Amount: TextView = findViewById<EditText>(R.id.txtAmount)
+        val Notes: TextView = findViewById<EditText>(R.id.txtNotes)
+        val Event: TextView = findViewById<EditText>(R.id.txtEvent)
+        val AmountPaid: TextView = findViewById<EditText>(R.id.txtAmountPaid)
+        //val txtAmountPaid: TextView = findViewById<EditText>(R.id.txtAmountPaid)
+        val Date: TextView = findViewById<EditText>(R.id.txtDate)
+        val Confirmation: TextView = findViewById<EditText>(R.id.cbConfirmation)
+        //Button Decalre
+        val Record: Button = findViewById(R.id.btnRecord)
+        //
 
         // on below line we are initializing our
         // variable with their ids.
@@ -105,5 +162,42 @@ class donation : AppCompatActivity() {
 
         // loading chart
         pieChart.invalidate()
-    }
+
+        //Firebase Code
+        //Declaring Variables
+        //Second Method
+        /*val FirstName: TextView = findViewById<EditText>(R.id.txtFirstName)}
+        val LastName: TextView = findViewById<EditText>(R.id.txtLastName)}
+        val Contact: TextView = findViewById<EditText>(R.id.txtContact)}
+        val PayerEmail: TextView = findViewById<EditText>(R.id.txtPayerEmail)}
+        val Amount: TextView = findViewById<EditText>(R.id.txtAmount)}
+        val Notes: TextView = findViewById<EditText>(R.id.txtFirstName)}
+        val Event: TextView = findViewById<EditText>(R.id.txtEvent)}
+        val AmountPaid: TextView = findViewById<EditText>(R.id.txtNotes)}
+        val Date: TextView = findViewById<EditText>(R.id.txtDate)}
+        val Confirmation: TextView = findViewById<EditText>(R.id.cbConfirmation)}*/
+
+        //NEW FIREBASE CODE IS BELOWE (Line 182 to Line 200)
+        /*
+        btnRecord.setOnClickListener()
+        {
+            myRef.child("Donations").child(currentTime).child("Image").setValue(mapImage).addOnSuccessListener {
+                Toast.makeText(this, "Successful" , Toast.LENGTH_SHORT).show()
+            } .addOnFailureListener{ error ->
+                Toast.makeText(this, it.toString(),  Toast.LENGTH_SHORT).show()
+            }
+
+            myRef.child("Donations").child(currentTime).child("FirstName").setValue(FirstName.text.toString())
+            myRef.child("Donations").child(currentTime).child("LastName").setValue(LastName.text.toString())
+            myRef.child("Donations").child(currentTime).child("Contact").setValue(Contact.text.toString())
+            myRef.child("Donations").child(currentTime).child("PayerEmail").setValue(PayerEmail.text.toString())
+            myRef.child("Donations").child(currentTime).child("Amount").setValue(Amount.toString())
+            myRef.child("Donations").child(currentTime).child("Notes").setValue(Notes.text.toString())
+            myRef.child("Donations").child(currentTime).child("Event").setValue(Event.text.toString())
+            myRef.child("Donations").child(currentTime).child("AmountPaid").setValue(AmountPaid.text.toString())
+            myRef.child("Donations").child(currentTime).child("Confirmation").setValue(Confirmation.text.toString())
+
+            Toast.makeText(this, "Donation Saved.", Toast.LENGTH_SHORT).show()
+        }*/
+    }//end of first bracket
 }
