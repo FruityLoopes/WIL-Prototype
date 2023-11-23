@@ -68,7 +68,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="51dp"
         android:layout_weight="1"
-        app:layout_constraintBottom_toTopOf="@+id/recordAttendanceButton"
+        app:layout_constraintBottom_toTopOf="@+id/btnRecordAtt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tvSelectDate"
         app:layout_constraintTop_toBottomOf="@+id/tvSelectDate">
@@ -115,7 +115,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spClass" />
 
     <Button
-        android:id="@+id/recordAttendanceButton"
+        android:id="@+id/btnRecordAtt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="59dp"

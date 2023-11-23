@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -43,7 +44,6 @@ class Attendance : AppCompatActivity() {
         setContentView(R.layout.activity_attendance)
 
         auth = Firebase.auth
-        attAdapter = AttendanceAdapter()
 
         dateRecyclerView = findViewById(R.id.dateRecyclerView)
         dateAdapter = DateAdapter()
@@ -53,8 +53,11 @@ class Attendance : AppCompatActivity() {
         val arrayAdapter: ArrayAdapter<String> = ArrayAdapter<String>(this, R.layout.spinner_layout, listClass)
         arrayAdapter.setDropDownViewResource(R.layout.spinner_layout)
 
+        val recordAtt: Button = findViewById(R.id.btnRecordAtt)
         val feed: RecyclerView = findViewById(R.id.feedAtt)
-
+        attAdapter = AttendanceAdapter { clickedAttendance ->
+            Log.d("Attendance", "Clicked attendance: ${clickedAttendance.Student}, Attended: ${clickedAttendance.attended}")
+        }
         feed.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = attAdapter
@@ -142,6 +145,15 @@ class Attendance : AppCompatActivity() {
             }
         }
 
+        recordAtt.setOnClickListener(){
+            val attendedStudents = Items.filter { it.attended }
+            // Process the list of attended students as needed
+            // For example, you can print their names:
+            for (student in attendedStudents) {
+                Log.d("Attendance", "Attended: ${student.Student}")
+            }
+        }
+
     }
 
     private inner class DateAdapter : RecyclerView.Adapter<DateAdapter.DateViewHolder>() {
@@ -215,33 +227,4 @@ class Attendance : AppCompatActivity() {
     }
 }
 
-/*
-executor.execute {
 
-    myRef.addValueEventListener(object :
-        ValueEventListener { //has been adjusted to timesheet values
-
-        override fun onDataChange(snapshot: DataSnapshot) {
-            Items.clear()
-
-            for (unique in snapshot.children) {
-                val Student = unique.child("Students").getValue().toString()
-
-                Items.add(
-                    AttendanceData( Student = Student)
-                )
-            }
-            attAdapter.notifyDataSetChanged()
-
-        }
-
-
-        override fun onCancelled(error: DatabaseError) { //handles errors
-            Log.w("Firebase", "Failed to read value", error.toException())
-        }
-    })
-    Handler(Looper.getMainLooper()).post {
-        attAdapter.submitList(Items)
-    }
-
-}*/
