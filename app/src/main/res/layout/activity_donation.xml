@@ -48,7 +48,6 @@
                 android:textStyle="bold"
 
                 ></TextView>
-
             <EditText
                 android:id="@+id/txtFirstName"
                 android:layout_width="match_parent"

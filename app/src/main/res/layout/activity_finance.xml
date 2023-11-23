@@ -14,7 +14,7 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="124dp"
         android:layout_marginEnd="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnRecord"
+        app:layout_constraintBottom_toTopOf="@+id/btnRecordFinance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -35,15 +35,20 @@
                 android:textAlignment="center"
                 android:textSize="30dp"
                 android:textStyle="bold"></TextView>
-            <!---->
-            <EditText
-                android:id="@+id/txtfeespaidyorn"
-                android:textColor="@color/black"
+
+            <Spinner
+                android:id="@+id/spinClass"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
-                android:hint="Fees paid – yes or no"
+                android:textColor="@color/black"
                 android:background="@drawable/edittext_bg"/>
-
+            <Spinner
+                android:id="@+id/spinChild"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:textColor="@color/black"
+                android:background="@drawable/edittext_bg"/>
+            <!---->
             <EditText
                 android:id="@+id/txtdate"
                 android:textColor="@color/black"
@@ -96,7 +101,7 @@
                 android:background="@drawable/edittext_bg"/>
 
             <CheckBox
-                android:id="@+id/cbConfirmation"
+                android:id="@+id/cbConfirmationFinance"
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,7 +113,7 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/btnRecord"
+        android:id="@+id/btnRecordFinance"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginBottom="26dp"
