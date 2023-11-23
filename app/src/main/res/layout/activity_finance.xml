@@ -9,7 +9,7 @@
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="3dp"
         android:layout_marginTop="124dp"
@@ -17,15 +17,18 @@
         app:layout_constraintBottom_toTopOf="@+id/btnRecord"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:textColor="@color/black">
 
             <TextView
                 android:id="@+id/tvPayment"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Record Payment"
@@ -35,6 +38,7 @@
             <!---->
             <EditText
                 android:id="@+id/txtfeespaidyorn"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
                 android:hint="Fees paid – yes or no"
@@ -42,6 +46,7 @@
 
             <EditText
                 android:id="@+id/txtdate"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
                 android:hint="Date"
@@ -49,6 +54,7 @@
 
             <EditText
                 android:id="@+id/txtamountpaid"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
                 android:hint="Amount paid"
@@ -56,6 +62,7 @@
             <!---->
             <EditText
                 android:id="@+id/txtFirstName"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
                 android:hint="First Name"
@@ -63,6 +70,7 @@
 
             <EditText
                 android:id="@+id/txtLastName"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
                 android:hint="Last Name"
@@ -70,6 +78,7 @@
 
             <EditText
                 android:id="@+id/txtContact"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
                 android:ems="10"
@@ -79,41 +88,16 @@
 
             <EditText
                 android:id="@+id/txtPayerEmail"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
                 android:hint="Email address"
                 android:inputType="textEmailAddress"
                 android:background="@drawable/edittext_bg"/>
 
-            <!--<EditText
-                android:id="@+id/txtAmount"
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:ems="10"
-                android:hint="Amount"
-                android:inputType="numberDecimal" />-->
-
-            <EditText
-                android:id="@+id/txtNotes"
-                android:layout_width="match_parent"
-                android:layout_height="82dp"
-                android:gravity="start|top"
-                android:hint="Additional Notes"
-                android:inputType="textMultiLine"
-                android:background="@drawable/edittext_bg"/>
-
-
-
-            <!--<EditText
-                android:id="@+id/txtDate"
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:ems="10"
-                android:hint="Date"
-                android:inputType="date" />-->
-
             <CheckBox
                 android:id="@+id/cbConfirmation"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="I confirm that the above information is correct" />

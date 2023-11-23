@@ -8,5 +8,6 @@
    <CheckBox
        android:id="@+id/cbAttendance"
        android:layout_width="match_parent"
+       android:textColor="@color/black"
        android:layout_height="wrap_content"/>
 </LinearLayout>
