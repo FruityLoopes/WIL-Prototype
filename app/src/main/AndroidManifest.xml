@@ -12,6 +12,21 @@
         android:theme="@style/Theme.UviweAppV1"
         tools:targetApi="31">
         <activity
+            android:name="uviwe.app.uviweappv1.FinancialView"
+            android:exported="false"
+            android:label="@string/title_activity_financial_view"
+            android:theme="@style/Theme.UviweAppV1" />
+        <activity
+            android:name="uviwe.app.uviweappv1.DonationView"
+            android:exported="false"
+            android:label="@string/title_activity_donation_view"
+            android:theme="@style/Theme.UviweAppV1" />
+        <activity
+            android:name="uviwe.app.uviweappv1.AttendanceView"
+            android:exported="false"
+            android:label="@string/title_activity_attendance_view"
+            android:theme="@style/Theme.UviweAppV1" />
+        <activity
             android:name="uviwe.app.uviweappv1.donation"
             android:exported="false" />
         <activity
