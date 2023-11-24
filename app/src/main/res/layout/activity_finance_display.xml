@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/finanace_backround"
+    tools:context="uviwe.app.uviweappv1.FinanceDisplay">
+
+    <Spinner
+        android:id="@+id/spinnerFinDis"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="17dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/edittext_bg"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/feedFinDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="169dp"
+        android:textColor="@android:color/black"
+        android:layout_height="33dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/edittext_bg"
+        android:layout_marginBottom="21dp"
+        android:text="Select Class"
+        app:layout_constraintBottom_toTopOf="@+id/feedFinDisplay"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerFinDis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feedFinDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/edittext_bg"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
