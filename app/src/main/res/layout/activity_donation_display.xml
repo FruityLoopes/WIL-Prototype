@@ -9,37 +9,39 @@
 
 
     <EditText
-        android:id="@+id/spinnerDonDis"
+        android:id="@+id/txtEndDate"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginTop="119dp"
         android:layout_marginEnd="17dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/edittext_bg"
-        android:hint="End Date (yyyymmdd)"
+        android:inputType="date"
+        android:hint="End Date (yyyy/mm/dd)"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnFilter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/txtStartDate"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textView2"
+        android:id="@+id/txtStartDate"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="37dp"
         android:layout_marginEnd="14dp"
         android:background="@drawable/edittext_bg"
-        android:hint="Start Date (yyymmdd)"
+        android:hint="Start Date (yyyy/mm/dd)"
+        android:inputType="date"
         android:textColor="@android:color/black"
         android:textSize="15sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/spinnerDonDis"
-        app:layout_constraintEnd_toStartOf="@+id/spinnerDonDis"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtEndDate"
+        app:layout_constraintEnd_toStartOf="@+id/txtEndDate"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnFilter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
@@ -49,7 +51,7 @@
         app:layout_constraintBottom_toTopOf="@+id/feedDonDisplay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerDonDis" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEndDate" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/feedDonDisplay"
@@ -64,6 +66,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFilter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

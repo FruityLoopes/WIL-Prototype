@@ -72,7 +72,7 @@ class donation : AppCompatActivity() {
         val Confirm: CheckBox = findViewById(R.id.cbConfirmation)
         //Button Decalre
         val Record: Button = findViewById(R.id.btnRecord)
-
+        val Display = findViewById<Button>(R.id.btnDonDisplay)
 
         Record.setOnClickListener()
         {
@@ -99,6 +99,11 @@ class donation : AppCompatActivity() {
             }
 
 
+        }
+
+        Display.setOnClickListener(){
+            val intent = Intent(this, DonationDisplay::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -29,15 +29,15 @@ class login : AppCompatActivity() {
 
         login.setOnClickListener{
             performLogin()
+
         }
         register.setOnClickListener{
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
-        }
-
-        if (check == true){
             finish()
         }
+
+
     }
 
     private fun performLogin(){
@@ -59,6 +59,7 @@ class login : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     val intent = Intent(this, categories::class.java)
                     startActivity(intent)
+                    finish()
                 } else {
                     // If sign in fails, display a message to the user.
                     Toast.makeText(baseContext, "Authentication failed.",
@@ -74,6 +75,7 @@ class login : AppCompatActivity() {
         if (firebaseUser != null) {
             val intent = Intent(this, categories::class.java)
             startActivity(intent)
+            finish()
         } else {
             check = false
         }
