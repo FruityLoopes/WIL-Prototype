@@ -76,7 +76,7 @@ class donation : AppCompatActivity() {
 
         Record.setOnClickListener()
         {
-            if(Confirm.isActivated != false){
+            if(Confirm.isChecked){
                 val currentTime = System.currentTimeMillis().toString()
                 myRef.child(currentTime).child("FirstName").setValue(FirstName.text.toString())
                 myRef.child(currentTime).child("LastName").setValue(LastName.text.toString())

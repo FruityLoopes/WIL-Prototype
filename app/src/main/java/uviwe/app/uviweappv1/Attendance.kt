@@ -81,7 +81,9 @@ class Attendance : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 listClass.clear()
                 for(keys in snapshot.children){
-                    listClass.add(keys.key.toString())
+                    if(keys.key.toString() != "Donations"){
+                        listClass.add(keys.key.toString())
+                    }
                 }
 
                 arrayAdapter.notifyDataSetChanged()
@@ -98,7 +100,6 @@ class Attendance : AppCompatActivity() {
         {
             override fun onItemSelected(parent: AdapterView<*>, v: View, position: Int, arg3: Long) {
                 spinnerValue = parent.getItemAtPosition(position).toString()
-                Toast.makeText(baseContext, "Selected Class $spinnerValue", Toast.LENGTH_SHORT).show()
                 val myRef = database.getReference(spinnerValue).child("Students")
                 executor.execute {
 
@@ -144,7 +145,7 @@ class Attendance : AppCompatActivity() {
             for (student in attendedStudents) {
                 count++
                 val myRef = database.getReference(spinnerValue).child("Students")
-                myRef.child(student.Student).child(formattedFB ).setValue("Attended")
+                myRef.child(student.Student).child(formattedFB).setValue("Attended")
                 Log.d("Attendance", "Attended: ${student.Student}")
             }
 
