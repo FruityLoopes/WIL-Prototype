@@ -1,5 +1,6 @@
 package uviwe.app.uviweappv1
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -30,7 +31,6 @@ import java.util.concurrent.Executors
 
 
 class Attendance : AppCompatActivity() {
-    private lateinit var auth: FirebaseAuth
     lateinit var attAdapter: AttendanceAdapter
     private val Items: MutableList<AttendanceData> = mutableListOf()
     private lateinit var dateAtt: TextView
@@ -40,7 +40,7 @@ class Attendance : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_attendance)
 
-        auth = Firebase.auth
+
 
         dateAtt = findViewById(R.id.dateAtt)
         spinClass = findViewById(R.id.spClass)
@@ -49,6 +49,7 @@ class Attendance : AppCompatActivity() {
         val arrayAdapter: ArrayAdapter<String> = ArrayAdapter<String>(this, R.layout.spinner_layout, listClass)
         arrayAdapter.setDropDownViewResource(R.layout.spinner_layout)
 
+        val viewAll = findViewById<Button>(R.id.btnToDisplay)
         val recordAtt: Button = findViewById(R.id.btnRecordAtt)
         val feed: RecyclerView = findViewById(R.id.feedAtt)
         attAdapter = AttendanceAdapter { clickedAttendance ->
@@ -152,6 +153,10 @@ class Attendance : AppCompatActivity() {
             myRef.child(formattedFB).setValue(count.toString())
         }
 
+        viewAll.setOnClickListener(){
+            val intent = Intent(this, AttendanceDisplay::class.java)
+            startActivity(intent)
+        }
     }
 }
 
