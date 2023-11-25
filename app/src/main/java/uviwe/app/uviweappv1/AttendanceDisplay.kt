@@ -10,7 +10,11 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Spinner
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uviweappv1.R
@@ -115,5 +119,38 @@ class AttendanceDisplay : AppCompatActivity() {
                 // TODO Auto-generated method stub
             }
         }
+
+        btnAdd.setOnClickListener(){
+            showAddChildDialog()
+        }
+    }
+
+    private fun showAddChildDialog() {
+        val database = FirebaseDatabase.getInstance("https://wil-prototype-default-rtdb.europe-west1.firebasedatabase.app/")
+        val myRef = database.getReference(spinnerValueDisplay ).child("Students")
+
+        val builder = AlertDialog.Builder(this)
+        val inflater = layoutInflater
+        val dialogView = inflater.inflate(R.layout.add_child, null)
+
+        val etChildName = dialogView.findViewById<EditText>(R.id.etChildName)
+        val txtclass = dialogView.findViewById<TextView>(R.id.txtClassAdd)
+        txtclass.text = spinnerValueDisplay
+        val btnAddChild = dialogView.findViewById<Button>(R.id.btnAddChild)
+
+        builder.setView(dialogView)
+        val alertDialog = builder.create()
+
+        btnAddChild.setOnClickListener {
+            val childName = etChildName.text.toString().trim()
+            if (childName.isNotEmpty()) {
+                myRef.child(childName).setValue("")
+                alertDialog.dismiss()
+            } else {
+                Toast.makeText(this, "Please enter a child's name", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        alertDialog.show()
     }
 }
