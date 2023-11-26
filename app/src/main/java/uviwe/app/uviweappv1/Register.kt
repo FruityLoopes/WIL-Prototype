@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.example.uviweappv1.R
 import com.google.firebase.auth.FirebaseAuth
@@ -26,7 +27,7 @@ class Register : AppCompatActivity() {
             performRegister()
         }
 
-        val log: Button = findViewById(R.id.btnReturnLogin)
+        val log: TextView = findViewById(R.id.btnReturnLogin)
         log.setOnClickListener{
             val intent = Intent(this, login::class.java)
             startActivity(intent)

@@ -9,46 +9,65 @@
 
     <Spinner
         android:id="@+id/spinnerFinDis"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="17dp"
-        android:textColor="@android:color/black"
+        android:layout_width="174dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="128dp"
         android:background="@drawable/edittext_bg"
-        android:layout_marginBottom="12dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerStudentFin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Spinner
+        android:id="@+id/spinnerStudentFin"
+        android:layout_width="174dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_bg"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/feedFinDisplay"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2" />
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFinDis" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="169dp"
-        android:textColor="@android:color/black"
         android:layout_height="33dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="118dp"
-        android:layout_marginEnd="14dp"
+        android:layout_marginTop="128dp"
         android:background="@drawable/edittext_bg"
-        android:layout_marginBottom="21dp"
         android:text="Select Class"
-        app:layout_constraintBottom_toTopOf="@+id/feedFinDisplay"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toStartOf="@+id/spinnerFinDis"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="169dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_bg"
+        android:text="Select Student"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/feedFinDisplay"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerStudentFin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/feedFinDisplay"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="12dp"
-        android:textColor="@android:color/black"
+        android:layout_width="391dp"
+        android:layout_height="445dp"
         android:background="@drawable/edittext_bg"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="27dp"
+        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerStudentFin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

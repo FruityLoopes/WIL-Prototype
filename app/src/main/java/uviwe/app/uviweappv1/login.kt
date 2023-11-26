@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.example.uviweappv1.R
 import com.google.firebase.auth.FirebaseAuth
@@ -20,7 +21,7 @@ class login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val register: Button = findViewById(R.id.btnRegister)
+        val register: TextView = findViewById(R.id.btnRegister)
         val login: Button = findViewById(R.id.btnLogin)
         // Initialize Firebase Auth
         auth = Firebase.auth

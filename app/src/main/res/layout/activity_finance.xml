@@ -10,15 +10,15 @@
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="492dp"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="3dp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btnRecordFinance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,11 +28,11 @@
 
             <TextView
                 android:id="@+id/tvPayment"
-                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Record Payment"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="30dp"
                 android:textStyle="bold"></TextView>
 
@@ -40,74 +40,75 @@
                 android:id="@+id/spinClass"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
-                android:textColor="@color/black"
-                android:background="@drawable/edittext_bg"/>
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black" />
+
             <Spinner
                 android:id="@+id/spinChild"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
-                android:textColor="@color/black"
-                android:background="@drawable/edittext_bg"/>
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black" />
             <!---->
             <TextView
                 android:id="@+id/txtdate"
-                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:textSize="19sp"
+                android:background="@drawable/edittext_bg"
                 android:hint="Date"
-                android:background="@drawable/edittext_bg"/>
+                android:textColor="@color/black"
+                android:textSize="19sp" />
 
             <EditText
                 android:id="@+id/txtamountpaid"
-                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:inputType="number"
+                android:background="@drawable/edittext_bg"
                 android:hint="Amount paid"
-                android:background="@drawable/edittext_bg"/>
+                android:inputType="number"
+                android:textColor="@color/black" />
             <!---->
             <EditText
                 android:id="@+id/txtFirstName"
-                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:background="@drawable/edittext_bg"
                 android:hint="First Name"
-                android:background="@drawable/edittext_bg"/>
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/txtLastName"
-                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:background="@drawable/edittext_bg"
                 android:hint="Last Name"
-                android:background="@drawable/edittext_bg"/>
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/txtContact"
-                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:background="@drawable/edittext_bg"
                 android:ems="10"
                 android:hint="Contact number"
                 android:inputType="phone"
-                android:background="@drawable/edittext_bg"/>
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/txtPayerEmail"
-                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:background="@drawable/edittext_bg"
                 android:hint="Email address"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/edittext_bg"/>
+                android:textColor="@color/black" />
 
             <CheckBox
                 android:id="@+id/cbConfirmationFinance"
-                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="I confirm that the above information is correct" />
+                android:text="I confirm that the above information is correct"
+                android:textColor="@color/black" />
 
 
         </LinearLayout>
@@ -119,12 +120,25 @@
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginBottom="26dp"
-        android:text="Record"
         android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="Record"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+
+    <Button
+        android:id="@+id/btnFinDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="Display"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRecordFinance" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

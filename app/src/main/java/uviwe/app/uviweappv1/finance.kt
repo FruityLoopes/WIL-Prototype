@@ -1,5 +1,6 @@
 package uviwe.app.uviweappv1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -43,6 +44,7 @@ class finance : AppCompatActivity() {
         val Record = findViewById<Button>(R.id.btnRecordFinance)
         val spClass = findViewById<Spinner>(R.id.spinClass)
         val spChild = findViewById<Spinner>(R.id.spinChild)
+        val FinDisplay = findViewById<Button>(R.id.btnFinDisplay)
 
         val listClass : ArrayList<String> = ArrayList()
         val arrayAdapter: ArrayAdapter<String> = ArrayAdapter<String>(this, R.layout.spinner_layout, listClass)
@@ -50,7 +52,7 @@ class finance : AppCompatActivity() {
 
         val Items : ArrayList<String> = ArrayList()
         val attAdapter: ArrayAdapter<String> = ArrayAdapter<String>(this, R.layout.spinner_layout, Items)
-        arrayAdapter.setDropDownViewResource(R.layout.spinner_layout)
+        attAdapter.setDropDownViewResource(R.layout.spinner_layout)
 
         val c = Calendar.getInstance().time
 
@@ -90,6 +92,10 @@ class finance : AppCompatActivity() {
         })
 
 
+        FinDisplay.setOnClickListener(){
+            val intent = Intent(this, FinanceDisplay::class.java)
+            startActivity(intent)
+        }
         spClass.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, v: View, position: Int, arg3: Long) {
                 spinnerValue = parent.getItemAtPosition(position).toString()
