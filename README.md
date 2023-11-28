@@ -22,6 +22,10 @@
 
 # UI Diagram
 ![UI Navigation Diagram (1)](https://github.com/FruityLoopes/WIL-Prototype/assets/126910290/2df117c3-85ec-4f19-ac9f-8167d563fe14)
+# Updated UI Diagram
+![New UI Design](https://github.com/FruityLoopes/WIL-Prototype/assets/116079876/7098a8d6-4c0a-4c64-a925-a0829c1061aa)
 
 # Sequence Diagram
 ![Sequence Diagram](https://github.com/FruityLoopes/WIL-Prototype/assets/126910290/ca125923-d9e3-4fdd-83fb-11e22e660d61)
+# Updated Sequence Diagram
+![New WIl Sequence Diagram](https://github.com/FruityLoopes/WIL-Prototype/assets/116079876/21c9bb9a-41a7-4666-bec2-c28502814aca)
