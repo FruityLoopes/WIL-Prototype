@@ -3,6 +3,7 @@ package uviwe.app.uviweappv1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Environment
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
@@ -22,9 +23,19 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import java.io.IOException
 import java.util.concurrent.Executors
+import com.opencsv.CSVWriter
+import com.opencsv.exceptions.CsvException
+import java.io.File
+import java.io.FileOutputStream
+import java.io.FileWriter
+import java.io.OutputStreamWriter
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 
- var spinnerValueDisplay : String = ""
+var spinnerValueDisplay : String = ""
 class AttendanceDisplay : AppCompatActivity() {
     private val Items: MutableList<AttendanceData> = mutableListOf()
     lateinit var attAdapter: AttDisplayAdapter
@@ -123,6 +134,15 @@ class AttendanceDisplay : AppCompatActivity() {
         btnAdd.setOnClickListener(){
             showAddChildDialog()
         }
+        val btnExport = findViewById<Button>(R.id.btnExport)
+        btnExport.setOnClickListener {
+            exportToTXT()
+        }
+        // Get the current month name
+        val currentMonthName = getCurrentMonthName()
+
+        // Set the month name in your report header (assuming you have a TextView with ID txtReportHeader)
+        findViewById<TextView>(R.id.txtReportHeader).text = "Attendance Report - $currentMonthName"
     }
 
     private fun showAddChildDialog() {
@@ -152,5 +172,49 @@ class AttendanceDisplay : AppCompatActivity() {
         }
 
         alertDialog.show()
+    }
+    val fileName = "attendance_Report.txt"
+    val filePath = File(
+        Environment.getExternalStorageDirectory().toString(),
+        fileName
+    )
+    private fun exportToTXT() {
+        try {
+            // Create a file object for the external storage directory
+            val file = File(
+                Environment.getExternalStorageDirectory(),
+                "attendance_Report.txt"
+            )
+
+            // Create a FileOutputStream and an OutputStreamWriter to write to the file
+            val fileOutputStream = FileOutputStream(file)
+            val outputStreamWriter = OutputStreamWriter(fileOutputStream)
+
+            outputStreamWriter.write("${getCurrentMonthName()}\n\n")
+            outputStreamWriter.write("Student\tDays attended\n")
+            // Write data to the file
+            for (item in Items) {
+                val line = "${item.Student},\t ${item.Days}\n"
+                outputStreamWriter.write(line)
+            }
+
+            // Close the OutputStreamWriter and FileOutputStream
+            outputStreamWriter.close()
+            fileOutputStream.close()
+
+            Toast.makeText(
+                this,
+                "Data exported to ${file.absolutePath}",
+                Toast.LENGTH_SHORT
+            ).show()
+        } catch (e: IOException) {
+            e.printStackTrace()
+            Toast.makeText(this, "Error exporting data", Toast.LENGTH_SHORT).show()
+        }
+    }
+    private fun getCurrentMonthName(): String {
+        val calendar = Calendar.getInstance()
+        val monthFormatter = SimpleDateFormat("MMMM", Locale.getDefault())
+        return monthFormatter.format(calendar.time)
     }
 }
